@@ -1,0 +1,7 @@
+{
+  "name": "ODTesAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
