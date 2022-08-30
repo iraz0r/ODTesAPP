@@ -1,20 +1,60 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      ODTes
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="12">
+        <ion-icon name="person"></ion-icon>
+        <ion-text>
+          <h1>Bienvenido</h1>
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card color="primary" button [routerLink]="['/generar']">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <ion-text>
+            <h2>Generar OT</h2>
+          </ion-text>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card color="primary" button [routerLink]="['/modificar']">
+          <ion-icon name="pencil-outline"></ion-icon>
+          <ion-text>
+            <h2>Modificar OT</h2>
+          </ion-text>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card color="primary" button [routerLink]="['/eliminar']">
+          <ion-icon name="trash-outline"></ion-icon>
+          <ion-text>
+            <h2>Eliminar OT</h2>
+          </ion-text>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card color="danger" button [routerLink]="['/inicio']"  (click)="showLoading()">
+          <ion-icon name="exit-outline"></ion-icon>
+          <ion-text>
+            <h2>Salir</h2>
+          </ion-text>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

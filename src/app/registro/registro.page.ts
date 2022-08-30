@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { LoadingController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-registro',
+  templateUrl: './registro.page.html',
+  styleUrls: ['./registro.page.scss'],
 })
-export class HomePage {
+export class RegistroPage implements OnInit {
 
   constructor(private loadingCtrl: LoadingController) {}
 
@@ -19,6 +19,9 @@ export class HomePage {
     });
 
     loading.present();
+  }
+
+  ngOnInit() {
   }
 
 }

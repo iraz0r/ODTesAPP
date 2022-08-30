@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Modificar ODT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre del Cliente</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">RUT/RUN del Cliente</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Observaciones de Atención</ion-label>
+      <ion-textarea placeholder="Ingresar detalles de la atención" rows="8"></ion-textarea>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="Tipo de Atencion" interface="popover">
+          <ion-select-option value="Soporte">Soporte</ion-select-option>
+          <ion-select-option value="Consulta">Consulta</ion-select-option>
+          <ion-select-option value="Reporte">Reporte</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <p></p>
+    <ion-row>
+      <ion-col>
+        <ion-button id="open-modal" color="primary" expand="block">Modificar</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+  <ion-modal
+    trigger="open-modal"
+    [initialBreakpoint]="0.25"
+    [breakpoints]="[0, 0.25, 0.5, 0.75]"
+    handleBehavior="cycle"
+  >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>ODT modificada</ion-title>
+          <ion-buttons slot="end">
+            <ion-button [routerLink]="['/home']" type="submit">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
